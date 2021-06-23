@@ -1,0 +1,50 @@
+$primary-color-100: #191923;
+$primary-color-200: #575764;
+$secondary-color-100: #0E79B2;
+$secondary-color-200: #7eccf7;
+$neutral-color-100: #000000;
+$neutral-color-200: #e6e6e6;
+$neutral-color-300: #ffffff;
+
+body {
+    background-color: $neutral-color-200;
+}
+
+@mixin flex-container($justify-dir: center, $align-dir: center) {
+    display: flex;
+    justify-content: $justify-dir;
+    align-items: $align-dir;
+}
+
+%flex--center {
+    @include flex-container;    
+}
+
+%flex--left {
+    @include flex-container($justify-dir: left);
+}
+
+.page-header {
+    @extend %flex--center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $primary-color-100;
+    width: 100%;
+
+    h1 {
+        color: $neutral-color-300;
+    }
+}
+
+.page-footer {
+    @extend %flex--left;
+    position: absolute;
+    bottom: 0;
+    background-color: $primary-color-100;
+    width: 100%;
+
+    span {
+        color: $neutral-color-300;
+    }
+}
