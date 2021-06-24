@@ -2,18 +2,28 @@ $primary-color-100: #191923;
 $primary-color-200: #575764;
 $secondary-color-100: #0E79B2;
 $secondary-color-200: #7eccf7;
+// neutral colors
 $neutral-color-100: #000000;
 $neutral-color-200: #e6e6e6;
 $neutral-color-300: #ffffff;
+// notes colors
+$notes-yellow-color-100: #c3ba03;
+$notes-yellow-color-200: #fcf231;
+$notes-green-color-100: #1eb95d;
+$notes-green-color-200: #25f1aa;
+$notes-pink-color-100: #f361a3;
+$notes-pink-color-200: #ffb7d7;
 
 body {
     background-color: $neutral-color-200;
 }
 
-@mixin flex-container($justify-dir: center, $align-dir: center) {
+@mixin flex-container($justify-dir: center, $align-dir: center, $flex-dir: row) {
+
     display: flex;
     justify-content: $justify-dir;
     align-items: $align-dir;
+    flex-direction: $flex-dir;
 }
 
 %flex--center {
@@ -24,27 +34,33 @@ body {
     @include flex-container($justify-dir: left);
 }
 
+@mixin btn() {
+    @include flex-container;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
 .page-header {
     @extend %flex--center;
-    position: fixed;
-    top: 0;
-    left: 0;
+    // currently removed as not needed
+    // position: absolute;
+    // top: 0;
+    // left: 0;
     background-color: $primary-color-100;
     width: 100%;
 
-    h1 {
+    &__h1 {
         color: $neutral-color-300;
     }
 }
 
 .page-footer {
     @extend %flex--left;
-    position: absolute;
-    bottom: 0;
     background-color: $primary-color-100;
     width: 100%;
 
-    span {
+    &__span {
         color: $neutral-color-300;
     }
 }

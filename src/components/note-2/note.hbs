@@ -1,0 +1,17 @@
+<div class="note">
+    {{!-- sticky note area --}}
+    <textarea class='note__textarea note-{{color}}'>{{text}}</textarea>
+    {{!-- toolbar --}}
+    {{!-- change color, popup, delete --}}
+    <div class="note-toolbar">
+        <button class="note-toolbar__btn--chng-color">
+            <i class="fas fa-palette"></i>
+        </button>
+        {{!-- <button class="note-toolbar__btn--popup">
+            <i class="fas fa-expand"></i>
+        </button> --}}
+        <button class="note-toolbar__btn--delete">
+            <i class="fas fa-trash-alt"></i>
+        </button>
+    </div>
+</div>

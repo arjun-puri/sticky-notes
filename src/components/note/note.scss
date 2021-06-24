@@ -1,0 +1,92 @@
+@use '../../styles/_base';
+
+// notes font
+@font-face {
+    font-family: 'Alex Brush';
+    src: url('../../assets/fonts/AlexBrush-Regular.ttf');
+}
+
+.notes-container {
+    @include base.flex-container($justify-dir: center);
+    width: 100%;
+    flex-wrap: wrap;
+
+    &__btn--add-note {
+        @include base.btn();
+        position: fixed;
+        bottom: 3rem;
+        right: 2rem;
+        z-index: 1;
+    }
+
+    &__i--add {
+        color: base.$primary-color-100;
+
+        &:hover {
+            color: base.$primary-color-200;
+        }
+    }
+}
+
+.note {
+    position: relative;
+    margin: 1rem;
+
+    &__textarea {
+        font-family: 'Alex Brush';
+        font-size: 1.4rem;
+        background-color: base.$notes-yellow-color-200;
+        padding: 1rem;
+        min-width: 10rem;
+        min-height: 10rem;
+        max-width: 30rem;
+        max-height: 20rem;
+        box-shadow: 0 0 10px base.$notes-yellow-color-100;
+    }
+}
+
+.note-toolbar {
+    @include base.flex-container($flex-dir: column);
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: base.$neutral-color-100;
+
+    &__btn--chng-color, &__btn--popup, &__btn--delete {
+        @include base.btn();
+        padding: 0.3rem;
+        margin: 0.2rem 0 0.2rem 0;
+        width: 100%;
+        &:hover {
+            background-color: base.$neutral-color-200;
+            i {
+                color: base.$neutral-color-100;
+            }
+        }
+
+        i {
+            color: base.$neutral-color-300;
+        }
+    }
+}
+
+.note {
+    &-yellow {
+        background-color: base.$notes-yellow-color-200;     
+        box-shadow: 0 0 10px base.$notes-yellow-color-100;
+    }
+
+    &-green {
+        background-color: base.$notes-green-color-200;     
+        box-shadow: 0 0 10px base.$notes-green-color-100;
+    }
+
+    &-pink {
+        background-color: base.$notes-pink-color-200;     
+        box-shadow: 0 0 10px base.$notes-pink-color-100;
+    }
+}
+

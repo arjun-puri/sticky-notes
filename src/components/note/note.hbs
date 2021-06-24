@@ -1,0 +1,13 @@
+<section class='notes-container'>
+    {{!-- add notes button --}}
+    <button id="addNoteBtn" class="notes-container__btn--add-note">
+        <i class="fas fa-plus-circle fa-3x notes-container__i--add"></i>
+    </button>
+
+    {{!-- rendering notes --}}
+    {{#each notes}}
+        <div class='notes-container__div'>
+            {{note}}
+        </div>
+    {{/each}}
+</section>

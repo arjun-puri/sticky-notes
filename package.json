@@ -7,5 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "arjun-puri",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.4.1",
+    "grunt-sass": "^3.1.0",
+    "sass": "^1.35.1"
+  },
+  "dependencies": {
+    "load-grunt-tasks": "^5.1.0"
+  }
 }

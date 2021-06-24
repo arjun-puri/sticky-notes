@@ -1,0 +1,130 @@
+body {
+  background-color: #e6e6e6;
+}
+
+.page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+}
+
+.page-header {
+  background-color: #191923;
+  width: 100%;
+}
+.page-header__h1 {
+  color: #ffffff;
+}
+
+.page-footer {
+  background-color: #191923;
+  width: 100%;
+}
+.page-footer__span {
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: "Alex Brush";
+  src: url("../../assets/fonts/AlexBrush-Regular.ttf");
+}
+.notes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.notes-container__btn--add-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  border: none;
+  background: none;
+  position: fixed;
+  bottom: 3rem;
+  right: 2rem;
+  z-index: 1;
+}
+.notes-container__i--add {
+  color: #191923;
+}
+.notes-container__i--add:hover {
+  color: #575764;
+}
+
+.note {
+  position: relative;
+  margin: 1rem;
+}
+.note__textarea {
+  font-family: "Alex Brush";
+  font-size: 1.4rem;
+  background-color: #fcf231;
+  padding: 1rem;
+  min-width: 10rem;
+  min-height: 10rem;
+  max-width: 30rem;
+  max-height: 20rem;
+  box-shadow: 0 0 10px #c3ba03;
+}
+
+.note-toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000000;
+}
+.note-toolbar__btn--chng-color, .note-toolbar__btn--popup, .note-toolbar__btn--delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  border: none;
+  background: none;
+  padding: 0.3rem;
+  margin: 0.2rem 0 0.2rem 0;
+  width: 100%;
+}
+.note-toolbar__btn--chng-color:hover, .note-toolbar__btn--popup:hover, .note-toolbar__btn--delete:hover {
+  background-color: #e6e6e6;
+}
+.note-toolbar__btn--chng-color:hover i, .note-toolbar__btn--popup:hover i, .note-toolbar__btn--delete:hover i {
+  color: #000000;
+}
+.note-toolbar__btn--chng-color i, .note-toolbar__btn--popup i, .note-toolbar__btn--delete i {
+  color: #ffffff;
+}
+
+.note-yellow {
+  background-color: #fcf231;
+  box-shadow: 0 0 10px #c3ba03;
+}
+.note-green {
+  background-color: #25f1aa;
+  box-shadow: 0 0 10px #1eb95d;
+}
+.note-pink {
+  background-color: #ffb7d7;
+  box-shadow: 0 0 10px #f361a3;
+}
+
+/*# sourceMappingURL=note.css.map */
