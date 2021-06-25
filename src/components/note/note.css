@@ -47,6 +47,7 @@ body {
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
+  height: 100vh;
 }
 .notes-container__btn--add-note {
   display: flex;
