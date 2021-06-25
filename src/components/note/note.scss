@@ -6,6 +6,11 @@
     src: url('../../assets/fonts/AlexBrush-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'Handlee';
+    src: url('../../assets/fonts/Handlee-Regular.ttf');
+}
+
 .notes-container {
     @include base.flex-container($justify-dir: center);
     width: 100%;
@@ -33,7 +38,7 @@
     margin: 1rem;
 
     &__textarea {
-        font-family: 'Alex Brush';
+        font-family: 'Handlee';
         font-size: 1.4rem;
         background-color: base.$notes-yellow-color-200;
         padding: 1rem;
